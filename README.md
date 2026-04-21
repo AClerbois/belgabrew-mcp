@@ -44,7 +44,8 @@ belgabrew-mcp/
 │   ├── 02-resources-prompts/     # Demo 2 — Resources & Prompts
 │   ├── 03-elicitation/           # Demo 3 — Human-in-the-loop
 │   ├── 04-mcp-app/               # Demo 4 — Interactive UI widget
-│   └── 05-copilot-studio/        # Demo 5 — Copilot Studio enterprise
+│   ├── 05-copilot-studio/        # Demo 5 — Copilot Studio enterprise
+│   └── 06-tasks/                 # Demo 6 (BONUS) — MCP Tasks long-running
 ├── deploy/
 │   └── bicep/                    # Azure Container Apps deployment
 └── docs/
@@ -61,6 +62,9 @@ belgabrew-mcp/
 | 3 | Elicitation | `server.ElicitAsync()` | Human-in-the-loop, structured form |
 | 4 | MCP App (UI widget) | `text/html;profile=mcp-app` | Interactive HTML in the chat |
 | 5 | Copilot Studio | Streamable HTTP + Entra ID | Enterprise governance |
+| 6 | MCP Tasks (BONUS) | `IMcpTaskStore` | Long-running tools, call-now/fetch-later, explicit + automatic |
+
+> ⚠️ MCP Tasks est expérimental dans la spec MCP (2025-11-25) — ✅ supporté par le SDK .NET v1.2.0
 
 ## Resources
 
