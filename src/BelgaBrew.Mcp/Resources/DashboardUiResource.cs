@@ -3,13 +3,6 @@ using ModelContextProtocol.Server;
 
 namespace BelgaBrew.Mcp.Resources;
 
-/// <summary>
-/// DEMO 4 — MCP App : UI interactive dans le chat
-///
-/// Un MCP App est une Resource avec MimeType = "text/html;profile=mcp-app".
-/// Le client (VS Code Copilot) rend l'HTML dans un panneau iframe.
-/// Le JS communique avec le serveur MCP via postMessage (JSON-RPC 2.0).
-/// </summary>
 [McpServerResourceType]
 public class DashboardUiResource
 {

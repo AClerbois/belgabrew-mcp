@@ -20,4 +20,7 @@ public class MockInventoryService : IInventoryService
 
     public Task<List<InventoryItem>> GetAllAsync(CancellationToken ct = default)
         => Task.FromResult(_items);
+
+    public Task<List<InventoryItem>> GetLowStockAsync(CancellationToken ct = default)
+        => Task.FromResult(_items.Where(i => i.QuantityKg < i.ReorderThresholdKg).ToList());
 }

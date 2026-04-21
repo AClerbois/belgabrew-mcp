@@ -15,7 +15,12 @@ cd src/BelgaBrew.Mcp
 dotnet run
 
 # Open MCP Inspector (in another terminal)
-npx @modelcontextprotocol/inspector http://localhost:5000/mcp
+# Option A — web UI (recommended): open http://localhost:6274 then set transport to
+#   "Streamable HTTP" and URL to http://localhost:5050/mcp
+npx @modelcontextprotocol/inspector
+
+# Option B — CLI direct connect
+npx @modelcontextprotocol/inspector --transport streamable-http --url http://localhost:5050/mcp
 ```
 
 ## Project Structure

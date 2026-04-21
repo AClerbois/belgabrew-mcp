@@ -25,7 +25,7 @@ cd src/BelgaBrew.Mcp
 dotnet run
 
 # Terminal 2 — ouvrir l'inspecteur MCP
-npx @modelcontextprotocol/inspector http://localhost:5000/mcp
+npx @modelcontextprotocol/inspector --transport streamable-http --url http://localhost:5050/mcp
 ```
 
 Dans l'inspecteur :
@@ -36,6 +36,20 @@ Dans l'inspecteur :
 
 Puis dans VS Code Copilot agent mode :
 > "Quel est le stock du houblon Saaz ?"
+
+## ⚠️ Commande inspector correcte
+
+```bash
+# ❌ NE PAS faire — passe l'URL comme commande stdio :
+npx @modelcontextprotocol/inspector http://localhost:5050/mcp
+
+# ✅ Faire — spécifier le transport HTTP explicitement :
+npx @modelcontextprotocol/inspector --transport streamable-http --url http://localhost:5050/mcp
+
+# ✅ Ou lancer le web UI et configurer manuellement :
+npx @modelcontextprotocol/inspector
+# Ouvre http://localhost:6274 → transport: Streamable HTTP → URL: http://localhost:5050/mcp
+```
 
 ## Points clés à dire
 

@@ -4,6 +4,7 @@ public interface IInventoryService
 {
     Task<InventoryItem> GetAsync(string sku, CancellationToken ct = default);
     Task<List<InventoryItem>> GetAllAsync(CancellationToken ct = default);
+    Task<List<InventoryItem>> GetLowStockAsync(CancellationToken ct = default);
 }
 
 public record InventoryItem(
